@@ -12,7 +12,7 @@ body {
     height: 900px;
     margin: auto;
     background-color: white;
-    border: dashed 1px red;
+   // border: dashed 1px red;
 }
 header{
     background-color: antiquewhite;
@@ -31,6 +31,7 @@ header{
     width: 68%;
     height: 100px;
 }
+
 nav {
     width: 100%;
     height: 60px;
@@ -48,9 +49,10 @@ nav>a {
 nav>a:hover {
     background-color: aquamarine;
 }
+
 .content {
     width: 100%;
-    border: dashed 1px green;
+    //border: dashed 1px green;
 }
 .layout-column{
     width: 610px;
@@ -79,7 +81,7 @@ nav>a:hover {
 .wrapper2{
     margin: auto;
     padding-top: 20px;
-    border: 1px solid red;
+    //border: 1px solid red;
 }
 .layout-widecol{
     float: left;
@@ -87,7 +89,7 @@ nav>a:hover {
     margin-left: 20px;
     margin-bottom: 20px;
     padding: 20px;
-    border: solid dodgerblue 1px;
+    //border: solid dodgerblue 1px;
 }
 .footer-widgets {
     margin-bottom: 25px;
@@ -116,9 +118,10 @@ footer{
     text-align: left;
     margin: 10px 0 10px 0;
 }
-.access-request {
+.template-request {
+    display: none;
     width: 440px;
-    padding: 10px;
+    padding: 20px 10px 10px 10px;
     background-color: rgba(0,0,0,0.1);
     text-align: center;
 }
@@ -146,9 +149,10 @@ input[type="button"] {
 button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+    cursor: pointer;
 }
 
 button:nth-last-of-type(1),
@@ -157,13 +161,31 @@ input[type="button"]:nth-last-of-type(1) {
 margin-right: 0;
 }
 
-button.dialogPanel {
+button.dialog {
     margin: 0;
     width: 460px;
 }
-
+.dialog.admins {
+    background-color: #FAAF3B;
+    -moz-background-color: #FAAF3B;
+    -webkit-background-color: #FAAF3B;
+    text-align: left;
+    margin-bottom: 1px;
+}
+.dialog.common {
+    background-color: #364D74;
+    -moz-background-color: #364D74;
+    -webkit-background-color: #364D74;
+    text-align: left;
+    margin-bottom: 1px;
+}
+.dialog.newMess {
+    background-color: #13225B;
+    -moz-background-color: #13225B;
+    -webkit-background-color: #13225B;
+}
 select, input[type="text"], input[type="email"] {
-    width: 230px;
+    width: 250px;
     height: 48px;
     border-radius: 0;
     -webkit-border-radius: 0;
@@ -172,4 +194,50 @@ select, input[type="text"], input[type="email"] {
     margin-bottom: 16px;
     margin-right: 10px;
     padding-left: 10px;
+    box-shadow: inset 0 2px 2px 0 rgba(0,0,0,0.4);
+    font-size: 16px;
+}
+
+div.dialogOpen {
+    position: relative;
+    width: 458px;
+    height: 250px;
+    border: 1px dotted #13225B;
+    margin-bottom: 1px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    overflow: scroll;
+}
+.speech {
+    font-size: 14px;
+    padding: 8px 16px;
+}
+.speech.guest {
+    text-align: left;
+    background-color: rgba(3,177,215,.1);
+    margin-right: 32px;
+}
+.speech.owner {
+    text-align: right;
+    background-color: rgba(0,0,0,.1);
+    margin-left: 32px;
+}
+input[name="frase"] {
+    width: 341px;
+    margin: 0px;
+}
+input[name="sendFrase"] {
+    width: 100px;
+    height: 54px;
+    margin: 0px;
+}
+.speechWrapper {
+    display: none;
+    margin-bottom: 1px;
+}
+.dt-separator {
+    color: rgba(0,0,0,.3);
+    margin-top: 32px;
+    margin-bottom: 32px;
+    text-align: center;
 }
